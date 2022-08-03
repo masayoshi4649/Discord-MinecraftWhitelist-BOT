@@ -1,0 +1,13 @@
+[Unit]
+Description=Discord-MinecraftWhitelist-BOT
+
+[Service]
+Type=simple
+
+WorkingDirectory=/minecraft/apps/Discord-MinecraftWhitelist-BOT/
+ExecStart=/minecraft/apps/Discord-MinecraftWhitelist-BOT/Discord-MinecraftWhitelist-BOT
+ExecStop=/bin/kill -WINCH ${MAINPID}
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
